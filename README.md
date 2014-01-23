@@ -93,7 +93,7 @@ as separator (default: ```false```)
 (default: ```false```)
 
 
-Default output: ```'20140101T16:20:00'```
+Default format: 20140101T11:20:00
 
 
 UTC Example:
