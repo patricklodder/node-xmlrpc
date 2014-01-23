@@ -14,8 +14,8 @@ vows.describe('Date Formatter').addBatch({
     , "with colons": makeEncodeCase({colons: true}, 'T\\d{2}:\\d{2}:\\d{2}')
     , "without offset": makeEncodeCase({offset: false}, 'T\\d{2}[:]?\\d{2}[:]?\\d{2}(\\.\\d{3})?$')
     , "with offset": makeEncodeCase({offset: true}, '([+-]\\d{2}[:]\\d{2}|Z)$')
-    , "with milliseconds": makeEncodeCase({milliseconds: true}, '\\.\\d{3}([+-]\\d{2}[:]\\d{2}|Z)?$')
-    , "without milliseconds": makeEncodeCase({milliseconds: false}, 'T\\d{2}[:]?\\d{2}[:]?\\d{2}([+-]\\d{2}[:]\\d{2}|Z)?$')
+    , "with milliseconds": makeEncodeCase({ms: true}, '\\.\\d{3}([+-]\\d{2}[:]\\d{2}|Z)?$')
+    , "without milliseconds": makeEncodeCase({ms: false}, 'T\\d{2}[:]?\\d{2}[:]?\\d{2}([+-]\\d{2}[:]\\d{2}|Z)?$')
     , "to local representation": {
         topic: function (d) {
           date_formatter.setOpts()
